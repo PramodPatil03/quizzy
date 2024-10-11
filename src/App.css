@@ -110,7 +110,7 @@
   display: none;
   font-size: 1.2em;
   position: absolute;
-  top: 30px;
+  top: 60px;
   right: 30px;
 }
 .hint{
@@ -154,8 +154,8 @@
     font-size: 20px;
   }
   #logout-btn{
-    top: 0px;
-    right: 0px;
+    bottom: 20px;
+    margin: auto;
   }
   .container p{
     font-size: 14px;
