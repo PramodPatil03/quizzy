@@ -1,0 +1,140 @@
+/*! Problem Styling */
+
+.container{
+  width: 600px;
+  margin: auto;
+  /* margin-top: 75px; */
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 10px;
+  padding: 40px;
+  font-family: 'poppins';
+}
+
+.container hr{
+  height: 2px;
+  border: none;
+  background-color: antiquewhite;
+}
+.container h2{
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.container ul li{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-left: 15px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  cursor: pointer;  
+}
+
+.container ol{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  list-style: disc;
+}
+
+.btn{
+  width: 250px;
+  height: 50px;
+  margin: auto;
+  background-color: rgb(105, 164, 253);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5em ;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover{
+  border: 1px solid black;
+  background-color: rgb(58, 121, 215);
+}
+
+.index{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin: auto; */
+  font-size: 1.2em;
+}
+
+.correct{
+  background-color: rgba(90, 244, 146, 0.677);
+  border: 1px solid green;
+}
+
+.wrong{
+  background-color: rgba(245, 81, 81, 0.56);
+  border: 1px solid red;
+}
+
+#warning{
+  display: none;
+  color: red;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+
+
+/*! Login form Styling */
+
+.container form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.container form input{
+  height: 50px;
+  font-size: 1.3em;
+  font-weight: 600;
+  padding-left: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+}
+
+#logout-btn{
+  width: 120px;
+  height: 40px;
+  display: none;
+  font-size: 1.2em;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.hint{
+  color: blue;
+  font-size: 10px;
+}
+
+@media  (  max-width:600px) {
+  .container{
+    width: 90%;
+  }
+  .container h2{
+    font-size: 20px;
+  }
+  #logout-btn{
+    top: 0px;
+    right: 0px;
+  }
+  .container p{
+    font-size: 14px;
+  }
+  .container ol li{
+    font-size: 12px;
+  }
+}

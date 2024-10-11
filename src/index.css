@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* transition: 0.2s; */
+}
+
+html{
+  transition: ease-in-out;
+  
+}
+
+body{
+  padding-top: 75px;
+  height: 100dvh;
+  background-color: gray;
+  overflow: auto;
+}
