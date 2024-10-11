@@ -29,17 +29,23 @@ const Problems = () => {
         shuffleArray(data)
         let avg = score / data.length || 0
         // ?If the last answer is done then the result page will be set as true and calculate the performance
-        if (avg < 0.33) {
-            setPerformance("Low")
+        if (avg < 0.20) {
+            setPerformance("Poor")
+        }
+        else if(avg>0.20 && avg<0.33){
+            setPerformance('Low')
         }
         else if (avg < 0.5 && avg > 0.33) {
             setPerformance("Below average")
         }
-        else if (avg > 0.5 && avg < 0.75) {
+        else if (avg > 0.5 && avg < 0.7) {
             setPerformance("Awesome")
         }
-        else {
+        else if(avg >0.7 && avg<0.9){
             setPerformance("Super")
+        }
+        else {
+            setPerformance("Excellent")    
         }
     })
 
@@ -75,16 +81,15 @@ const Problems = () => {
 
         if (lock === true) {
             if (index === data.length - 1) {
-                // alert(score)
                 setResult(true)
                 return 0;
             }
             // ? Increment the index and update the question on every next button click
-            setIndex(1 + index)
+            setIndex(1+index)
             setQuestion(data[index + 1])
             setLock(false)
     
-            // ?  After every next btton click the previous question selections will be made null
+            // ?  After every next button click the previous question selections will be made null
             option_arr.map((option) => {
                 option.current.classList.remove("correct")
                 option.current.classList.remove("wrong")
