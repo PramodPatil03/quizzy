@@ -27,21 +27,22 @@ const Problems = () => {
     }
     useEffect(() => {
         shuffleArray(data)
-        let avg = score / data.length || 0
+        let avg = parseFloat(score / data.length)|| 0
         // ?If the last answer is done then the result page will be set as true and calculate the performance
+        // console.log(avg)
         if (avg < 0.20) {
             setPerformance("Poor")
         }
-        else if(avg>0.20 && avg<0.33){
+        else if(avg>=0.20 && avg<0.33){
             setPerformance('Low')
         }
-        else if (avg < 0.5 && avg > 0.33) {
+        else if (avg < 0.5 && avg >= 0.33) {
             setPerformance("Below average")
         }
-        else if (avg > 0.5 && avg < 0.7) {
+        else if (avg >= 0.5 && avg < 0.7) {
             setPerformance("Awesome")
         }
-        else if(avg >0.7 && avg<0.9){
+        else if(avg >=0.7 && avg<0.9){
             setPerformance("Super")
         }
         else {
@@ -109,6 +110,7 @@ const Problems = () => {
         setResult(false)
         setStart(false)
         setAnswered(0)
+        setPerformance('')
     }
 
     let pageContent;

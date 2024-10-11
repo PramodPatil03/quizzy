@@ -43,16 +43,7 @@ const closeAlert = ()=>{
     e.preventDefault()
     setUsername("")
     setPassword("")
-
-    if(users.includes(username)){
-      console.log("User Array"+users)
-      console.log("Pass Array"+passwords)
-        let u = users.indexOf(username);
-        let storedUser = users.at(u)
-        let storedPass = passwords.at(u);
-        console.log("Stored: "+storedUser+" & "+storedPass )
-        console.log("Input: "+username+" & "+password )
-        if(username === storedUser && password === storedPass){
+        if(username === 'admin' && password === 'admin'){
           window.localStorage.setItem('isLoggedIn', true)
           setTimeout(() => {
             document.getElementById('logout-btn').style.display = 'block'
@@ -64,18 +55,7 @@ const closeAlert = ()=>{
           setMessage("Invalid credentials.")
           document.getElementById('alert-container').style.display = 'flex'
         }
-    }else{
-      setUsers(prev =>[...prev, username])
-      setPasswords(prev =>[...prev, password])
-      console.log("User Array"+users)
-      console.log("Pass Array"+passwords)
-      window.localStorage.setItem("userArray", users)
-      window.localStorage.setItem("passArray", passwords)
-      window.localStorage.setItem('isLoggedIn', true)
-      setMessage("Registered Successfully.")
-      document.getElementById('alert-container').style.display = 'flex'
-      setIsLoggedIn(true)
-    }
+    
   }
 
   return (
