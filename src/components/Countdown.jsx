@@ -6,7 +6,6 @@ function Countdown({setResultVal}) {
     useEffect(()=>{
             timerId.current = setInterval(()=>{
                 setCountdown(prev=>prev-1);
-    
             },1000)
             return ()=> clearInterval(timerId.current)
         

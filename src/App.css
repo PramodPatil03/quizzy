@@ -3,14 +3,12 @@
 .container{
   width: 600px;
   margin: auto;
-  /* margin-top: 75px; */
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 15px;
   border-radius: 10px;
   padding: 40px;
-  font-family: 'poppins';
 }
 
 .container hr{
@@ -119,6 +117,34 @@
   color: blue;
   font-size: 10px;
 }
+
+
+
+/*! Alert Styling */
+
+#alert-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 60px;
+  width: 100%;
+  background-color: rgb(241, 148, 17);
+}
+
+#alert-container p{
+  font-size: 24;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 10px;
+}
+
+
+
+
 
 @media  (  max-width:600px) {
   .container{
