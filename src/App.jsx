@@ -81,6 +81,7 @@ const closeAlert = ()=>{
   return (
     <div>
       <Alert message={message} closeAlert = {closeAlert} />
+      <button className='btn' id='logout-btn' onClick={logout}>Logout</button>
       {
         isLoggedIn ? <><Problems /></>
           :
@@ -96,7 +97,6 @@ const closeAlert = ()=>{
 
 
       }
-      <button className='btn' id='logout-btn' onClick={logout}>Logout</button>
     </div>
   )
 }

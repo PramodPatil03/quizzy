@@ -38,7 +38,7 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
-  list-style: disc;
+  list-style: none;
 }
 
 .btn{
@@ -149,13 +149,14 @@
 @media  (  max-width:600px) {
   .container{
     width: 90%;
+    padding: 20px;
   }
   .container h2{
     font-size: 20px;
   }
   #logout-btn{
-    bottom: 20px;
-    margin: auto;
+    bottom: 0;
+    margin-bottom: 30px;
   }
   .container p{
     font-size: 14px;
