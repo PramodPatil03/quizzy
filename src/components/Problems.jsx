@@ -55,8 +55,8 @@ const Problems = () => {
     }
 
     const checkAns = (e, ans) => {
-        setAnswered(prev => prev + 1)
         if (lock === false) {
+            setAnswered(prev => prev + 1)
             if (document.getElementById('warning')) {
                 document.getElementById('warning').style.display = 'none'
             }
